@@ -1,0 +1,27 @@
+/* Layout Wrapper */
+body {
+    margin: auto;
+    max-width: 1440px;
+}
+
+main {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 560px) {
+    main {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (min-width: 1180px) {
+    main {
+        margin-left: 5rem;
+        margin-right: 5rem;
+        margin-bottom: 5rem;
+    }
+}

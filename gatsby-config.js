@@ -1,11 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Leo Sherman`,
+    description: `This is Leo Sherman's UX Design Portfolio.`,
+    author: `Leo Sherman`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          default: require.resolve(`./src/components/layout.js`)
+        }
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require('sass')
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
