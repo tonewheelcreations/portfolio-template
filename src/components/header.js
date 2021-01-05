@@ -10,8 +10,8 @@ const NavLink = (props) => (
 )
 
 const Header = ({ siteTitle }) => (
-  <header>
-    <div className={styles.headerContainer}>
+  <header className={styles.header}>
+    <div className={styles.headerDiv}>
       <h3>
         <Link to="/">
           {siteTitle}

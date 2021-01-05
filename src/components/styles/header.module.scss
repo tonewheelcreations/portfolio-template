@@ -1,6 +1,6 @@
 /* Header and navigation styles */
 
-header {
+.header {
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 1.5rem;
@@ -12,7 +12,7 @@ header {
     }
 }
 
-.header-container {
+.header-div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,19 +22,22 @@ header {
 
         li {
             display: inline;
+        }
+        
+        li:nth-child(n+2) {
             margin-left: 1rem;
         }
     }
 }
 
 @media screen and (min-width: 560px) {
-    header {
+    .header {
         margin-top: 2rem;
         margin-right: 2rem;
         margin-bottom: 2rem;
         margin-left: 2rem;
 
-        .header-container {
+        .header-div {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
@@ -43,7 +46,7 @@ header {
 }
 
 @media screen and (min-width: 1180px) {
-    header {
+    .header {
         margin-left: 5rem;
         margin-right: 5rem;
     }
