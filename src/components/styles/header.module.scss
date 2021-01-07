@@ -1,3 +1,5 @@
+@use 'breakpoints';
+
 /* Header and navigation styles */
 
 .header {
@@ -19,18 +21,19 @@
 
     ul {
         list-style-type: none;
+        margin-left: 0;
 
         li {
             display: inline;
         }
-        
-        li:nth-child(n+2) {
+
+        li:nth-child(n + 2) {
             margin-left: 1rem;
         }
     }
 }
 
-@media screen and (min-width: 560px) {
+@include breakpoints.breakpoint(md) {
     .header {
         margin-top: 2rem;
         margin-right: 2rem;
@@ -45,7 +48,7 @@
     }
 }
 
-@media screen and (min-width: 1180px) {
+@include breakpoints.breakpoint(lg) {
     .header {
         margin-left: 5rem;
         margin-right: 5rem;

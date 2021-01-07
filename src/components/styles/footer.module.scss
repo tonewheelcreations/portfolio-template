@@ -1,22 +1,8 @@
 /* Footer styles */
 
 .footer {
+    text-align: center;
+    width: 100%;
     position: fixed;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
     bottom: 1.5rem;
-}
-
-@media screen and (min-width: 560px) {
-    .footer {
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-}
-
-@media screen and (min-width: 1180px) {
-    .footer {
-        margin-left: 5rem;
-        margin-right: 5rem;
-    }
 }
