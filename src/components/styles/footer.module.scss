@@ -1,8 +1,23 @@
 /* Footer styles */
 
-.footer {
+@use 'breakpoints';
+
+.p {
     text-align: center;
-    width: 100%;
-    position: fixed;
-    bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+@include breakpoints.breakpoint(md) {
+    .p {
+        text-align: right;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@include breakpoints.breakpoint(lg) {
+    .p {
+        margin-right: 5rem;
+        margin-bottom: 5rem;
+    }
 }

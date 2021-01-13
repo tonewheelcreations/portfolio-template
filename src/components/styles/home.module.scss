@@ -1,8 +1,45 @@
-.header {
+@use 'breakpoints';
+
+.top-module {
     text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    h1 {
+        font-size: var(--text-xxxxl);
+    }
+
+    h2 {
+        font-weight: 500;
+    }
+}
+
+h3 {
+    font-weight: 600;
 }
 
 a {
     text-decoration: none;
     color: black;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+}
+
+.article {
+    grid-column: span 12;
+}
+
+@include breakpoints.breakpoint(md) {
+    .top-module {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .article {
+        grid-column: span 6;
+    }
 }
