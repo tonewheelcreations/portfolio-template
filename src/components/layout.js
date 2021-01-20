@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header.js"
 import Footer from "./footer.js"
 import "./styles/global.scss"
+import styles from "./styles/scroll.module.scss"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,12 +26,15 @@ const Layout = ({ children }) => {
 
   return (
     <div className="pageContainer">
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header id="#top" siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className="content">
         <main>{children}</main>
+        <div className={styles.scrollTop}>
+          <a href="#top">Top</a>
+        </div>
       </div>
       <Footer />
-    </div>
+    </div >
   )
 }
 

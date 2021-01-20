@@ -1,0 +1,25 @@
+@use 'breakpoints';
+
+.scrollTop {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+
+    a {
+        color: #d85945;
+        font-weight: 600;
+    }
+}
+
+@include breakpoints.breakpoint(md) {
+    .scrollTop {
+        justify-content: flex-end;
+        margin-top: 2rem;
+    }
+}
+
+@include breakpoints.breakpoint(lg) {
+    .scrollTop {
+        margin-top: 5rem;
+    }
+}

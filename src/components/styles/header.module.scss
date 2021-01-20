@@ -7,11 +7,6 @@
     margin-bottom: 1rem;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
 }
 
 .header-div {
@@ -19,18 +14,49 @@
     flex-direction: column;
     align-items: center;
 
+    h3 {
+        margin-top: 0;
+    }
+
     ul {
         list-style-type: none;
         margin-left: 0;
 
         li {
             display: inline;
+
+            a {
+                text-decoration: none;
+            }
+
+            a:link {
+                color: black;
+            }
+
+            a:focus {
+                color: #d85945;
+            }
+
+            a:hover {
+                border-bottom: 1px solid;
+                color: #d85945;
+            }
+
+            a:active {
+                border-bottom: 1px solid;
+                color: #d85945;
+            }
         }
 
         li:nth-child(n + 2) {
             margin-left: 1rem;
         }
     }
+}
+
+.selected {
+    border-bottom: 1px solid;
+    color: #d85945;
 }
 
 @include breakpoints.breakpoint(md) {
@@ -43,7 +69,7 @@
         .header-div {
             flex-direction: row;
             justify-content: space-between;
-            align-items: center;
+            align-items: baseline;
         }
     }
 }

@@ -1,9 +1,8 @@
 ---
 title: "An Empty Cart"
-date: "2021-01-03"
+date: "2021-01-05"
 featuredImage: ../images/empty-cart.jpg
 ---
 
-This is my second post!
+This is my second project! Woohoo!
 
-## A Title

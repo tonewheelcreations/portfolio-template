@@ -2,4 +2,8 @@
 @use 'typography';
 @use 'colors';
 @use 'breakpoints';
-@use 'wrapper';
+@use 'containers';
+
+html {
+    scroll-behavior: smooth;
+}

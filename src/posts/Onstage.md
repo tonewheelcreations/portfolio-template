@@ -1,10 +1,10 @@
 ---
+featuredImage: ../images/logo-web.png
 title: "Onstage: Bring Live Music Home"
-date: "2021-01-05"
-featuredImage: ../images/empty-cart.jpg
+subtitle: Onstage provides immersive live-streaming, bringing the concert experience to music fans — in the comfort of their homes. 
+date: "2021-01-03"
 ---
 
-This is my first post!
+More text will go here!
 
-## A Title
 

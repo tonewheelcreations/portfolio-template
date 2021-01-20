@@ -9,15 +9,16 @@ import Image from "gatsby-image"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
       edges {
         node {
+          excerpt(format: PLAIN)
           frontmatter {
-            date
+            date(formatString: "MMM D, YYYY")
             title
             featuredImage {
               childImageSharp {
-              fluid(maxWidth: 800) {
+              fluid(maxWidth: 800, maxHeight: 440) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -45,18 +46,20 @@ const IndexPage = () => {
           return (
             <article className={styles.article}>
               <Link to={`/portfolio/${edge.node.fields.slug}`}>
-                <div>
+                <div className={styles.imageContainer}>
                   <Image fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid} />
                 </div>
                 <div>
                   <h3>{edge.node.frontmatter.title}</h3>
                   <p>{edge.node.frontmatter.date}</p>
+                  <p>{edge.node.excerpt}</p>
                 </div>
               </Link>
             </article>
           )
         })}
       </div>
+
     </Layout >
   )
 }
