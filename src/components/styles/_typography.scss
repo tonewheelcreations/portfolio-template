@@ -1,54 +1,122 @@
+@use 'breakpoints';
+
 :root {
   // font family
   --font-primary: "Open Sans", sans-serif;
   --font-secondary: "Noto Sans JP", sans-serif;
 
-  // font size
-  --text-base-size: 1em; // body font-size
-  --text-scale-ratio: 1.2; // multiplier used to generate type scale values
-
-  // line-height
-  --body-line-height: 1.4;
-  --heading-line-height: 1.2;
-
-  // unit - don't modify unless changing the typography unit (e.g., from Em to Rem units)
-  --text-unit: 1em; // if not Em units → --text-unit: var(--text-base-size);
-}
-
-:root,
-* {
   // type scale
-  --text-xs: calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio));
-  --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
-  --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
-  --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
-  --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
-  --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
-  --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
-  --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
+  --base-size: 0.878em; // based on minor 2nd ratio
+  --scale-ratio: 1.25; // based on major 3rd ratio
+
+  // type sizes
+  --type-xxl: calc(var(--type-xl) * var(--scale-ratio));
+  --type-xl: calc(var(--type-lg) * var(--scale-ratio));
+  --type-lg: calc(var(--type-md) * var(--scale-ratio));
+  --type-md: calc(var(--type-sm) * var(--scale-ratio));
+  --type-sm: calc(var(--base-size) * var(--scale-ratio));
+  --type-xs: calc(var(--base-size) / var(--scale-ratio));
 }
 
-body {
-  font-family: var(--font-primary);
+@include breakpoints.breakpoint(md) {
+  h3 {
+    line-height: 1.45;
+  }
 }
 
-h1,
-h2,
-h3 {
-  // color: ;
-  font-family: var(--font-secondary);
+@include breakpoints.breakpoint(lg) {
+  :root {
+    --base-size: 0.937em;
+  }
+
+  h1 {
+    line-height: 1.15;
+  }
+
+  h2 {
+    line-height: 1.5;
+  }
+  h3 {
+    line-height: 1.5;
+  }
 }
+
+@include breakpoints.breakpoint(xl) {
+  :root {
+    --base-size: 1em;
+  }
+}
+
+/* h1 */
 
 h1 {
-  font-size: var(--text-xxl);
+  margin: 0;
+  min-width: 0;
+  font-size: var(--type-xl);
+  font-family: var(--font-secondary);
+  line-height: 1.25;
+  font-weight: 800;
+  -webkit-letter-spacing: -0.015em;
+  -moz-letter-spacing: -0.015em;
+  -ms-letter-spacing: -0.015em;
+  letter-spacing: -0.015em;
+  margin-top: var(--space-xxxs);
+  margin-bottom: var(--space-xxxs);
 }
+
+/* h2 */
 
 h2 {
-  font-size: var(--text-xl);
+  margin: 0;
+  min-width: 0;
+  font-family: var(--font-secondary);
+  font-size: var(--type-lg);
+  line-height: 1.2;
+  font-weight: 400;
+  margin-top: var(--space-xxxs);
+  margin-bottom: var(--space-xxxs);
 }
 
+/* h3 */
+
 h3 {
-  font-size: var(--text-lg);
+  margin: 0;
+  min-width: 0;
+  font-size: var(--type-md);
+  line-height: 1.4;
+  font-weight: 500;
+  -webkit-letter-spacing: -0.015em;
+  -moz-letter-spacing: -0.015em;
+  -ms-letter-spacing: -0.015em;
+  letter-spacing: -0.015em;
+  margin-top: var(--space-xxxxs);
+  margin-bottom: var(--space-xxxxs);
+}
+
+/* h3 */
+
+h4 {
+  margin: 0;
+  min-width: 0;
+  font-size: var(--type-sm);
+  line-height: 1.4;
+  font-weight: 500;
+  -webkit-letter-spacing: -0.015em;
+  -moz-letter-spacing: -0.015em;
+  -ms-letter-spacing: -0.015em;
+  letter-spacing: -0.015em;
+  margin-top: var(--space-xxxxs);
+  margin-bottom: var(--space-xxxxs);
+}
+
+body,
+p {
+  margin: 0;
+  min-width: 0;
+  font-size: var(--base-size);
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 // Noto Sans JP

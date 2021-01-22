@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import styles from "./styles/header.module.scss"
 import Contact from "./contact.js"
+import logo from "../svg/logo.svg"
+
 
 const NavLink = (props) => {
   return (
@@ -12,14 +14,10 @@ const NavLink = (props) => {
   )
 }
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header className={styles.header}>
     <div className={styles.headerDiv}>
-      <h3>
-        <Link to="/">
-          {siteTitle}
-        </Link>
-      </h3>
+      <Link to="/"><img className={styles.logo} src={logo} alt="logo" /></Link>
       <nav>
         <ul>
           <NavLink to="/">Portfolio</NavLink>

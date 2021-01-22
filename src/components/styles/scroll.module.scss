@@ -4,6 +4,8 @@
     display: flex;
     justify-content: center;
     margin-top: 1.5rem;
+    margin-left: var(--space-xxxl);
+    margin-right: var(--space-xxxl);
 
     a {
         color: #d85945;
@@ -21,5 +23,7 @@
 @include breakpoints.breakpoint(lg) {
     .scrollTop {
         margin-top: 5rem;
+        margin-left: 0;
+        margin-right: 0;
     }
 }

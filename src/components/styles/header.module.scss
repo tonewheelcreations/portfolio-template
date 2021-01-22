@@ -2,11 +2,13 @@
 
 /* Header and navigation styles */
 
+.logo {
+    height: var(--type-md);
+    // margin-bottom: 0;
+}
+
 .header {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin: var(--space-xxl) var(--space-xxxl);
 }
 
 .header-div {
@@ -60,23 +62,9 @@
 }
 
 @include breakpoints.breakpoint(md) {
-    .header {
-        margin-top: 2rem;
-        margin-right: 2rem;
-        margin-bottom: 2rem;
-        margin-left: 2rem;
-
-        .header-div {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-    }
-}
-
-@include breakpoints.breakpoint(lg) {
-    .header {
-        margin-left: 5rem;
-        margin-right: 5rem;
+    .header-div {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 }

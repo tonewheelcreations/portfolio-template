@@ -26,9 +26,9 @@ const Layout = ({ children }) => {
 
   return (
     <div className="pageContainer">
-      <Header id="#top" siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header id="top" siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className="content">
-        <main>{children}</main>
+        <main className="main">{children}</main>
         <div className={styles.scrollTop}>
           <a href="#top">Top</a>
         </div>

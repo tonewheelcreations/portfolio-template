@@ -1,0 +1,43 @@
+@use 'breakpoints';
+
+:root {
+    // space scale
+    --base-space: 1em; // based on major 3rd ratio
+    --space-ratio: 1.25; // based on major 3rd ratio
+
+    // space sizes
+    --space-xxxxl: calc(var(--space-xxxl) * var(--space-ratio));
+    --space-xxxl: calc(var(--space-xxl) * var(--space-ratio));
+    --space-xxl: calc(var(--space-xl) * var(--space-ratio));
+    --space-xl: calc(var(--base-space) * var(--space-ratio));
+    --space-lg: calc(var(--space-xl) / var(--space-ratio));
+    --space-md: calc(var(--space-lg) / var(--space-ratio));
+    --space-sm: calc(var(--space-md) / var(--space-ratio));
+    --space-xs: calc(var(--space-sm) / var(--space-ratio));
+    --space-xxs: calc(var(--space-xs) / var(--space-ratio));
+    --space-xxxs: calc(var(--space-xxs) / var(--space-ratio));
+    --space-xxxxs: calc(var(--space-xxxs) / var(--space-ratio));
+
+    --width: 90%;
+}
+
+// based on golden ratio
+@include breakpoints.breakpoint(md) {
+    :root {
+        --base-space: 1em;
+        --width: 75%;
+    }
+}
+
+@include breakpoints.breakpoint(lg) {
+    :root {
+        --base-space: 1.414em;
+        --width: 70%;
+    }
+}
+
+@include breakpoints.breakpoint(xl) {
+    :root {
+        --base-space: 1.999em;
+    }
+}

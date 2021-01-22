@@ -1,4 +1,5 @@
 @use 'breakpoints';
+@use 'spacers';
 
 body {
     margin: auto;
@@ -12,27 +13,16 @@ body {
 
 .content {
     flex: 1 0 auto;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-xxl);
 }
 
 .footer {
     flex-shrink: 0;
 }
 
-@include breakpoints.breakpoint(md) {
-    .content {
-        margin-left: 2rem;
-        margin-right: 2rem;
-        margin-bottom: 2rem;
-    }
-}
-
 @include breakpoints.breakpoint(lg) {
     .content {
-        margin-left: 5rem;
-        margin-right: 5rem;
-        margin-bottom: 5rem;
+        margin-left: var(--space-xxxl);
+        margin-right: var(--space-xxxl);
     }
 }

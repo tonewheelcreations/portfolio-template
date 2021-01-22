@@ -1,19 +1,22 @@
 @use 'breakpoints';
 @use 'colors';
+@use 'global';
 
 .top-module {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: var(--space-xxxl);
+    margin-bottom: var(--space-xxxl);
     margin-left: auto;
     margin-right: auto;
+    width: var(--width);
 
     h1 {
-        font-size: var(--text-xxxxl);
+        font-size: var(--type-xxl);
         text-align: center;
+        margin: 0;
         color: colors.$h1;
     }
 
@@ -21,16 +24,38 @@
         font-weight: 500;
         text-align: center;
     }
+
+    a {
+        color: black;
+    }
+
+    a:link {
+        color: black;
+    }
+
+    a:focus {
+        color: #d85945;
+    }
+
+    a:hover {
+        border-bottom: 1px solid;
+        color: #d85945;
+    }
+
+    a:active {
+        border-bottom: 1px solid;
+        color: #d85945;
+    }
 }
 
-h3 {
-    font-weight: 600;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-}
+.projectInfo {
+    h3 {
+        font-weight: 600;
+    }
 
-p {
-    margin-bottom: 1rem;
+    p {
+        margin-bottom: var(--space-xxxxs);
+    }
 }
 
 a {
@@ -41,29 +66,23 @@ a {
 .projects {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 1.5rem;
+    margin-left: var(--space-xxxl);
+    margin-right: var(--space-xxxl);
 }
 
 .article {
     grid-column: span 12;
-}
-
-@include breakpoints.breakpoint(md) {
-    .top-module {
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-        width: 90%;
-    }
-
-    .article {
-        grid-column: span 6;
-    }
+    margin-bottom: var(--space-xxl);
 }
 
 @include breakpoints.breakpoint(lg) {
-    .top-module {
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-        width: 70%;
+    .article {
+        grid-column: span 6;
+    }
+
+    .projects {
+        column-gap: var(--space-xl);
+        margin-left: 0;
+        margin-right: 0;
     }
 }

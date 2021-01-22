@@ -11,11 +11,11 @@ const IndexPage = () => {
   query {
     allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
       edges {
-        node {
-          excerpt(format: PLAIN)
+        node {          
           frontmatter {
             date(formatString: "MMM D, YYYY")
             title
+            subtitle
             featuredImage {
               childImageSharp {
               fluid(maxWidth: 800, maxHeight: 440) {
@@ -38,7 +38,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <div className={styles.topModule}>
         <h1>Hi, I'm Leo</h1>
-        <h2>I'm a UX Designer with roots in jazz composition and video production.</h2>
+        <h2>I'm a <Link to="/about/#design">UX Designer</Link> with roots in <Link to="/about/#music">jazz composition</Link> and <Link to="/about/#video">video production</Link>.</h2>
       </div>
 
       <div className={styles.projects}>
@@ -46,13 +46,14 @@ const IndexPage = () => {
           return (
             <article className={styles.article}>
               <Link to={`/portfolio/${edge.node.fields.slug}`}>
-                <div className={styles.imageContainer}>
+                <div>
                   <Image fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid} />
                 </div>
-                <div>
+                <div className={styles.projectInfo}>
                   <h3>{edge.node.frontmatter.title}</h3>
+                  <p>{edge.node.frontmatter.subtitle}</p>
                   <p>{edge.node.frontmatter.date}</p>
-                  <p>{edge.node.excerpt}</p>
+
                 </div>
               </Link>
             </article>
