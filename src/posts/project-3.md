@@ -1,5 +1,5 @@
 ---
-title: "Another Empty Cart"
+title: "My Third Project"
 date: "2021-01-06"
 featuredImage: ../images/empty-cart.jpg
 ---

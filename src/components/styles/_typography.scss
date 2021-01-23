@@ -123,8 +123,7 @@ p {
 
 @font-face {
   font-family: "Noto Sans JP";
-  src: url("../../fonts/NotoSansJP-Light-Alphabetic.woff2") format("woff2"),
-    url("../../fonts/NotoSansJP-Light-Alphabetic.woff") format("woff");
+  src: local("Noto Sans JP Light"), url("../../fonts/NotoSansJP-Light-Alphabetic.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -132,8 +131,7 @@ p {
 
 @font-face {
   font-family: "Noto Sans JP";
-  src: url("../../fonts/NotoSansJP-Bold-Alphabetic.woff2") format("woff2"),
-    url("../../fonts/NotoSansJP-Bold-Alphabetic.woff") format("woff");
+  src: local("Noto Sans JP Bold"), url("../../fonts/NotoSansJP-Bold-Alphabetic.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -141,17 +139,7 @@ p {
 
 @font-face {
   font-family: "Noto Sans JP";
-  src: url("../../fonts/NotoSansJP-Thin-Alphabetic.woff2") format("woff2"),
-    url("../../fonts/NotoSansJP-Thin-Alphabetic.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noto Sans JP";
-  src: url("../../fonts/NotoSansJP-Medium-Alphabetic.woff2") format("woff2"),
-    url("../../fonts/NotoSansJP-Medium-Alphabetic.woff") format("woff");
+  src: local("Noto Sans JP Medium"), url("../../fonts/NotoSansJP-Medium-Alphabetic.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -159,8 +147,7 @@ p {
 
 @font-face {
   font-family: "Noto Sans JP";
-  src: url("../../fonts/NotoSansJP-Regular-Alphabetic.woff2") format("woff2"),
-    url("../../fonts/NotoSansJP-Regular-Alphabetic.woff") format("woff");
+  src: local("Noto Sans JP Regular"), url("../../fonts/NotoSansJP-Regular-Alphabetic.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -170,22 +157,21 @@ p {
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../../fonts/OpenSans-Light.woff2") format("woff2"), url("../../fonts/OpenSans-Light.woff") format("woff");
+  src: local("Open Sans Light"), url("../../fonts/OpenSans-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../../fonts/OpenSans-Regular.woff2") format("woff2"),
-    url("../../fonts/OpenSans-Regular.woff") format("woff");
+  src: local("Open Sans Regular"), url("../../fonts/OpenSans-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../../fonts/OpenSans-Italic.woff2") format("woff2"), url("../../fonts/OpenSans-Italic.woff") format("woff");
+  src: local("Open Sans Italic"), url("../../fonts/OpenSans-Italic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -193,7 +179,7 @@ p {
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../../fonts/OpenSans-Bold.woff2") format("woff2"), url("../../fonts/OpenSans-Bold.woff") format("woff");
+  src: local("Open Sans Bold"), url("../../fonts/OpenSans-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;

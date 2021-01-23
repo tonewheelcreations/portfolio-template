@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Leo Sherman`,
+    title: `Leo Sherman, UX Designer`,
     description: `This is Leo Sherman's UX Design Portfolio.`,
     author: `Leo Sherman`,
   },
@@ -46,7 +46,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/portfolio-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

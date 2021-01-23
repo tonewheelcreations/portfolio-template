@@ -17,7 +17,10 @@ const NavLink = (props) => {
 const Header = () => (
   <header className={styles.header}>
     <div className={styles.headerDiv}>
-      <Link to="/"><img className={styles.logo} src={logo} alt="logo" /></Link>
+      <Link className={styles.logo} to="/">
+        <img width="32" height="32" src={logo} alt="logo" />
+        <span>Leo Sherman</span>
+      </Link>
       <nav>
         <ul>
           <NavLink to="/">Portfolio</NavLink>

@@ -8,8 +8,20 @@
     margin-right: var(--space-xxxl);
 
     a {
-        color: #d85945;
+        color: black;
         font-weight: 600;
+    }
+
+    a:link {
+        color: black;
+    }
+
+    a:focus {
+        color: #d85945;
+    }
+
+    a:hover {
+        color: #d85945;
     }
 }
 
