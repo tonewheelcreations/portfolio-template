@@ -26,11 +26,12 @@
     }
 
     a {
-        color: black;
+        color: #f0ebe9;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
 
     a:link {
-        color: black;
+        color: #f0ebe9;
     }
 
     a:focus {
@@ -38,13 +39,9 @@
     }
 
     a:hover {
-        border-bottom: 1px solid;
-        color: #d85945;
-    }
-
-    a:active {
-        border-bottom: 1px solid;
-        color: #d85945;
+        -webkit-text-stroke: 1px #d85945;
+        color: #f0ebe9;
+        text-shadow: 3px 3px 0 #d85945, -1px -1px 0 #d85945, 1px -1px 0 #d85945, -1px 1px 0 #d85945, 1px 1px 0 #d85945;
     }
 }
 
@@ -73,6 +70,11 @@ a {
 .article {
     grid-column: span 12;
     margin-bottom: var(--space-xxl);
+    transition: transform 0.2s;
+}
+
+.article:hover {
+    transform: scale(1.025);
 }
 
 @include breakpoints.breakpoint(lg) {

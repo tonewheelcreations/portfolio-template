@@ -1,7 +1,7 @@
 ---
-featuredImage: ../images/logo-web.png
 title: "Onstage: Bring Live Music Home"
 subtitle: Onstage provides immersive live-streaming, bringing the concert experience to music fans — in the comfort of their homes. 
+featuredImage: ../images/logo-web.png
 date: "2021-01-03"
 ---
 

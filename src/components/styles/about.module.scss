@@ -33,6 +33,11 @@
 .album {
     width: 100%;
     margin-bottom: var(--space-md);
+    transition: transform 0.2s;
+}
+
+.album:hover {
+    transform: scale(1.025);
 }
 
 .text-bio,
