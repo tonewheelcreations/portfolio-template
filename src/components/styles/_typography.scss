@@ -6,7 +6,7 @@
   --font-secondary: "Noto Sans JP", sans-serif;
 
   // type scale
-  --base-size: 1em; // based on minor 2nd ratio
+  --base-size: 0.937em; // based on minor 2nd ratio
   --scale-ratio: 1.25; // based on major 3rd ratio
 
   // type sizes
@@ -109,8 +109,7 @@ h4 {
   margin-bottom: var(--space-xxxxs);
 }
 
-body,
-p {
+body {
   margin: 0;
   min-width: 0;
   font-size: var(--base-size);
