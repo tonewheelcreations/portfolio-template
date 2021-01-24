@@ -38,10 +38,13 @@
         color: #d85945;
     }
 
-    a:hover {
-        -webkit-text-stroke: 1px #d85945;
-        color: #f0ebe9;
-        text-shadow: 3px 3px 0 #d85945, -1px -1px 0 #d85945, 1px -1px 0 #d85945, -1px 1px 0 #d85945, 1px 1px 0 #d85945;
+    @media (hover: hover) {
+        a:hover {
+            -webkit-text-stroke: 1px #d85945;
+            color: #f0ebe9;
+            text-shadow: 3px 3px 0 #d85945, -1px -1px 0 #d85945, 1px -1px 0 #d85945, -1px 1px 0 #d85945,
+                1px 1px 0 #d85945;
+        }
     }
 }
 

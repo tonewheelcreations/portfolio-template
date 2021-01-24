@@ -34,7 +34,8 @@
         list-style-type: none;
         margin-left: 0;
 
-        li {
+        li,
+        .page-link {
             display: inline;
 
             a {
@@ -45,24 +46,24 @@
                 color: black;
             }
 
-            a:focus {
-                color: #d85945;
-            }
-
-            a:hover {
-                border-bottom: 1px solid;
-                color: #d85945;
-            }
-
-            a:active {
-                border-bottom: 1px solid;
-                color: #d85945;
+            @media (hover: hover) {
+                a:hover {
+                    border-bottom: 1px solid;
+                    color: #d85945;
+                }
             }
         }
 
         li:nth-child(n + 2) {
             margin-left: 1rem;
         }
+    }
+}
+
+.page-link {
+    a:active {
+        border-bottom: 1px solid;
+        color: #d85945;
     }
 }
 

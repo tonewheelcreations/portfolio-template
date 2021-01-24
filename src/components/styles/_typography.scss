@@ -25,10 +25,6 @@
 }
 
 @include breakpoints.breakpoint(lg) {
-  // :root {
-  //   --base-size: 1em;
-  // }
-
   h1 {
     line-height: 1.15;
   }
@@ -40,12 +36,6 @@
     line-height: 1.5;
   }
 }
-
-// @include breakpoints.breakpoint(xl) {
-//   :root {
-//     --base-size: 1.067em;
-//   }
-// }
 
 /* h1 */
 

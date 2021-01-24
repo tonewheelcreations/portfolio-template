@@ -2,7 +2,6 @@ import React from 'react';
 import Obfuscate from 'react-obfuscate';
 
 const Contact = () => (
-
     <li>
         <Obfuscate
             email="tonewheelcreations@gmail.com"
