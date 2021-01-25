@@ -10,12 +10,7 @@ module.exports = {
     `gatsby-remark-images`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-sitemap`,
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
-    },
+    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {
