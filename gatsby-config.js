@@ -8,7 +8,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-remark-images`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.md`, `.mdx`],
+      },
+    },
     `gatsby-plugin-sitemap`,
     {
       resolve: 'gatsby-plugin-robots-txt',

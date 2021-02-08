@@ -11,7 +11,7 @@ const path = require('path')
 module.exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === 'MarkdownRemark') {
+  if (node.internal.type === 'Mdx') {
     const slug = path.basename(node.fileAbsolutePath, '.md')
     createNodeField({
       node,
@@ -26,7 +26,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const projectsTemplate = path.resolve('./src/templates/projects.js')
   const response = await graphql(`
     query {
-        allMarkdownRemark {
+        allMdx {
           edges {
             node {
               fields {
@@ -38,7 +38,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
       }
     `)
 
-  response.data.allMarkdownRemark.edges.forEach((edge) => {
+  response.data.allMdx.edges.forEach((edge) => {
     createPage({
       component: projectsTemplate,
       path: `/portfolio/${edge.node.fields.slug}`,

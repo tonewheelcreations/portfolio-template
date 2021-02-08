@@ -9,7 +9,7 @@ import Image from "gatsby-image"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
   query {
-    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+    allMdx(sort: {fields: frontmatter___date, order: DESC}) {
       edges {
         node {          
           frontmatter {
@@ -42,7 +42,7 @@ const IndexPage = () => {
       </div>
 
       <div className={styles.projects}>
-        {data.allMarkdownRemark.edges.map((edge) => {
+        {data.allMdx.edges.map((edge) => {
           return (
             <article className={styles.article}>
               <Link to={`/portfolio/${edge.node.fields.slug}`}>
