@@ -10,15 +10,14 @@ const Projects = ({ data }) => {
   const featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
   return (
     <Layout>
-      <div className={styles.header}>
+      <div className={styles.container}>
         <Img className={styles.image} fluid={featuredImgFluid} />
-        <div className={styles.title}>
+        <div className={styles.header}>
           <h1>{post.frontmatter.title}</h1>
           <h2>{post.frontmatter.subtitle}</h2>
         </div>
       </div>
-
-      <MDXRenderer>{post.body}</MDXRenderer>
+      <MDXRenderer className={styles.body}>{post.body}</MDXRenderer>
 
     </Layout>
   )
