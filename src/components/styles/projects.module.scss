@@ -1,7 +1,7 @@
 @use 'colors';
 @use 'breakpoints';
 
-.container {
+.header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
@@ -10,7 +10,7 @@
     grid-column: span 12;
 }
 
-.header {
+.title {
     background-color: colors.$background;
     grid-column: 2 / 12;
     z-index: 99;
@@ -57,12 +57,21 @@
         grid-column: 4 / 13;
     }
 
-    .header {
+    .title {
         grid-column: 1 / 9;
         padding-left: 0;
     }
 
     .body {
         margin: 0;
+    }
+
+    .test-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .test {
+        grid-column: 3 / 9;
     }
 }
