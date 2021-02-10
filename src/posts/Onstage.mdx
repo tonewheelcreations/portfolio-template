@@ -5,14 +5,17 @@ featuredImage: ../images/logo-web.png
 date: "2021-01-03"
 ---
 
-import Grid from "../templates/grid.js"
-export default Grid
+import Text from "../components/text.js"
+import Columns from "../components/columns.js"
+export default Text
+
+<Text>
 
 ### Setting the stage
 
 Live-streaming has taken over the way we consume media. Only 25% of the population in the U.S. had live-streamed online content back in 2017. At the time of writing this project, in 2020, that number approached 80%. This massive increase was due in part to the COVID-19 pandemic, which forced people to move many real-world experiences into the digital. One of these experiences was attending a live concert. I wanted to explore the music live-streaming space and see how concert goers were faring during the pandemic. What follows is a journey through this space, culminating in an app design that provides the live concert experience to music fans in the comfort of their homes. 
 
-![Onstage app final prototype](../images/cover-image-homescreen.png)
+![Onstage app final prototype](../images/cover-image-homescreen-3.png)
 
 ### The Problem
 
@@ -34,6 +37,8 @@ _A sample carousel of concerts from the music live-streaming service,_ _Sessions
 
 I was the sole UX designer and worked on the project from October 2020 until January 2021. My responsibilities included discovery, ideation, and visual design. After several rounds of testing from low to high fidelity design, I delivered a high fidelity prototype of the app.
 
+<Columns>
+
 What I did:
 
 *   Research
@@ -50,7 +55,7 @@ Tools used:
 *   Marvel
 *   Pen and paper
 
-  
+</Columns>
 
 ### The elephant in the room
 
@@ -96,6 +101,8 @@ I took these findings and began to distill them, first with an affinity map:
 
 This helped confirm what I noticed people pointing out during the interviews: they wanted something that felt “live,” felt personalized, was easy to navigate, and had a variety of content. I wanted to focus on these points and their accompanying desires and frustrations even more. Because these concert goers were sharing so many common points, I created personas to represent them.
 
+</Text>  
+
 ##### There were 4 types of users
 
 ![Richard, The Audiophile](../images/richard.jpg)
@@ -113,6 +120,8 @@ Sarah, The Customizer,  wanted the most life-like experience, like chatting with
 ![Jessie, The Casual Listener](../images/jessie.jpg)
 
 Jessie, The Casual Listener, who, like Richard, wanted something easy to use but that could play in the background if she couldn’t actively watch. 
+
+<Text>
 
 ##### Revisiting the problem
 
@@ -138,9 +147,13 @@ At this point, I had a lot of ideas about what the design could look like. I pul
 *   Concert programs
 *   Visually engaging virtual tickets 
 *   Artist profiles with featured images 
-*   3D audio and video settings 
+*   3D audio and video settings
+
+</Text>
 
 ![Early sketching of possible solutions](../images/ideation-1.jpg)
+
+<Text>
 
 One of the thoughts that kept coming back: how could we keep concert live-streaming as immersive as its real-life counterpart? You can watch a clip of this process below.
 
@@ -150,7 +163,11 @@ One of the thoughts that kept coming back: how could we keep concert live-stream
 
 Exploring a bunch of ideas was inspiring but staying true to the interview insights and personas was still the primary goal. So, I set out to map only the features that users needed with a set of user stories.
 
+</Text>
+
 ![User stories](../images/user-stories.jpg)
+
+<Text>
 
 This added focus but also helped break down the major needs into the individual features that they were made of. Now I had a rough design blueprint for a minimum viable product. The critical features were:
 
@@ -165,9 +182,21 @@ This added focus but also helped break down the major needs into the individual 
 
 Before moving on to visual design, I had to ensure that all of these features could flow in a logical way. I grouped the critical features into 3 red routes: personalize account, buy a concert ticket, and watch a concert. “Personalize account” addressed people’s needs to be able to create a profile and set music preferences; “Buy a concert ticket” included searching for concerts, getting concert info, and buying the tickets; “Watch a concert” allowed people to live-stream the concert in immersive audio and video. I would later change the wording of these routes as I went back over the designs. For now, this was enough to create user flows for the upcoming design.
 
-![Personalize account](../images/user-flow-1.jpg)
-![Buy a concert ticket](../images/user-flow-2.jpg)
-![Watch a concert](../images/user-flow-3.jpg)  
+</Text>
+
+###### Personalize Account
+
+![Personalize account](../images/user-flow-1.2.png)
+
+###### Buy a concert ticket
+
+![Buy a concert ticket](../images/user-flow-2.2.png)
+
+###### Watch a concert
+
+![Watch a concert](../images/user-flow-3.4.png)  
+
+<Text>
 
 ### Creating the music live-streaming experience
 
@@ -175,9 +204,13 @@ Before moving on to visual design, I had to ensure that all of these features co
 
 ##### Refining critical features into red routes
 
-I started by sketching out the 3 red routes based on the user flows: 
+I started by sketching out the 3 red routes based on the user flows: to sign up, find and purchase a concert, and watch a concert — seen in that order below. 
 
-![Refined sketches of the three red routes](../images/refined-sketches.jpg)  
+</Text>
+
+![Refined sketches of the three red routes](../images/refined-sketches-3.png)  
+
+<Text>
 
 ##### A usability test is worth 1000 Figma auto-saves
 
@@ -194,17 +227,21 @@ I got 5 unsuspecting  participants to take the prototype for a test-drive. I’m
 
 I applied the findings from this guerrilla testing to the next round of design: wireframes. 
 
+</Text>
+
 ###### Sign Up
 
-![Wireframe of "Sign Up"](../images/wireframe-1.png)  
+![Wireframe of "Sign Up"](../images/wireframe-1.1.png)  
 
 ###### Find and purchase a concert
 
-![Wireframe of "Find and purchase a concert"](../images/wireframe-1.png)  
+![Wireframe of "Find and purchase a concert"](../images/wireframe-2.1.png)  
 
 ###### Watch a concert
 
-![Wireframe of "Watch a concert"](../images/wireframe-2.png) 
+![Wireframe of "Watch a concert"](../images/wireframe-3.1.png) 
+
+<Text>
 
 Some of the main features I added were:
 
@@ -226,17 +263,21 @@ The entire style guide was a hefty 33-page affair, but here are some of the crit
 
 Using the style guide, I created high fidelity screens for the red routes. 
 
+</Text>
+
 ###### Sign Up
 
-![High fidelity screen of "Sign Up"](../images/hi-fi-1.png) 
+![High fidelity screen of "Sign Up"](../images/hi-fi-1.1.png) 
 
 ###### Find and purchase a concert
 
-![High fidelity screen of "Find and purchase a concert"](../images/hi-fi-2.png) 
+![High fidelity screen of "Find and purchase a concert"](../images/hi-fi-2.1.png) 
 
 ###### Watch a concert
 
-![High fidelity screen of "Watch a concert"](../images/hi-fi-3.png) 
+![High fidelity screen of "Watch a concert"](../images/hi-fi-3.1.png) 
+
+<Text>
 
 Some of the main features I added here were:
 
@@ -266,3 +307,4 @@ There were also some important lessons to address:
 
 I would certainly like to develop a working app in the future and hope that the virtual concerts of tomorrow will support live music fans and artists alike. Let’s see what happens. 
 
+</Text>
