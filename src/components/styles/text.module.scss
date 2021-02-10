@@ -1,8 +1,16 @@
+@use 'breakpoints';
+
 .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
 
 .items {
-    grid-column: 2 / 12;
+    grid-column: span 12;
+}
+
+@include breakpoints.breakpoint(lg) {
+    .items {
+        grid-column: 2 / 12;
+    }
 }

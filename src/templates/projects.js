@@ -17,9 +17,9 @@ const Projects = ({ data }) => {
           <h2>{post.frontmatter.subtitle}</h2>
         </div>
       </div>
-
-      <MDXRenderer>{post.body}</MDXRenderer>
-
+      <div className={styles.body}>
+        <MDXRenderer>{post.body}</MDXRenderer>
+      </div>
     </Layout>
   )
 }

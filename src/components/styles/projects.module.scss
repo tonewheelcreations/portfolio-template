@@ -18,7 +18,7 @@
     margin-top: calc(-1 * (var(--space-xxxl)));
     padding-left: var(--space-lg);
     padding-right: var(--space-lg);
-    margin-bottom: var(--space-lg);
+    // margin-bottom: var(--space-lg);
 
     h2 {
         font-size: var(--type-md);
@@ -27,13 +27,23 @@
 }
 
 .body {
-    grid-column: 1 / 13;
     margin-left: var(--space-xxxl);
     margin-right: var(--space-xxxl);
 
-    h2 {
-        margin-top: var(--type-sm);
-        margin-bottom: var(--type-xxs);
+    h2,
+    h3,
+    h5,
+    h6 {
+        margin-top: var(--type-lg);
+    }
+
+    h3 {
+        font-size: var(--type-lg);
+    }
+
+    h4,
+    h5 {
+        margin-bottom: var(--space-xs);
     }
 
     p {
@@ -69,9 +79,5 @@
     .test-container {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-    }
-
-    .test {
-        grid-column: 3 / 9;
     }
 }
