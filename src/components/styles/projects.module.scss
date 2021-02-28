@@ -49,6 +49,10 @@
     p {
         margin-top: var(--space-xxs);
         margin-bottom: var(--space-sm);
+
+        span {
+            margin: var(--space-xxl) 0;
+        }
     }
 
     ul,
@@ -68,7 +72,7 @@
     }
 
     .title {
-        grid-column: 1 / 9;
+        grid-column: 1 / 10;
         padding-left: 0;
     }
 
@@ -79,5 +83,12 @@
     .test-container {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@include breakpoints.breakpoint(xl) {
+    .title {
+        grid-column: 1 / 9;
+        padding-left: 0;
     }
 }

@@ -1,3 +1,13 @@
-.container {
-    columns: 2;
+@use 'breakpoints';
+
+@include breakpoints.breakpoint(xl) {
+    .container {
+        display: flex;
+        align-items: baseline;
+
+        div:first-child {
+            width: 100%;
+            margin-right: 4rem;
+        }
+    }
 }
