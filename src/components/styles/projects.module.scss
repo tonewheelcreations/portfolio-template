@@ -31,7 +31,6 @@
     margin-right: var(--space-xxxl);
 
     h2,
-    h3,
     h5,
     h6 {
         margin-top: var(--type-lg);
@@ -39,6 +38,7 @@
 
     h3 {
         font-size: var(--type-lg);
+        margin-top: var(--type-md);
     }
 
     h4,

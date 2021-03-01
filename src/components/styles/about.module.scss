@@ -1,5 +1,7 @@
 @use 'breakpoints';
 
+/*** Containers ***/
+
 .container-bio,
 .container-music {
     display: flex;
@@ -8,17 +10,14 @@
     margin-left: var(--space-xxxl);
     margin-right: var(--space-xxxl);
     margin-top: var(--space-xxxxl);
-    padding-bottom: var(--space-xxxxl);
+    padding-bottom: var(--space-xxs);
 }
 
 .container-video {
     margin-top: var(--space-xxxxl);
-    padding-bottom: var(--space-xxxxl);
 }
 
-.h2 {
-    text-align: center;
-}
+/*** Container Assets ***/
 
 .profile,
 .album {
@@ -33,11 +32,12 @@
 .album {
     width: 100%;
     margin-bottom: var(--space-md);
-    transition: transform 0.2s;
+    margin-top: var(--space-md);
 }
 
-.album:hover {
-    transform: scale(1.025);
+.video {
+    margin-top: var(--space-xxl);
+    padding-bottom: var(--space-xxxxl);
 }
 
 .text-bio,
@@ -46,6 +46,12 @@
 
     h1 {
         margin-top: var(--space-sm);
+    }
+
+    h1,
+    h2 {
+        font-size: var(--type-lg);
+        margin-bottom: var(--space-md);
         text-align: center;
     }
 
@@ -58,6 +64,17 @@
     }
 }
 
+/*** Video Header ***/
+
+.h2 {
+    text-align: center;
+    font-size: var(--type-lg);
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+/*** Media Queries ***/
+
 @include breakpoints.breakpoint(md) {
     .container-bio,
     .container-music {
@@ -67,14 +84,17 @@
 }
 
 @include breakpoints.breakpoint(xl) {
+    .h2 {
+        font-size: var(--type-xl);
+        text-align: center;
+        margin-top: 0;
+    }
+
     .container-bio,
     .container-music {
         flex-direction: row;
-        max-width: 100%;
-    }
-
-    .container-bio {
         flex-flow: row-reverse;
+        max-width: 100%;
     }
 
     .profile,
@@ -96,6 +116,8 @@
 
         h1 {
             text-align: left;
+            font-size: var(--type-xl);
+            margin-bottom: var(--space-xxxs);
             margin-top: 0;
         }
     }
@@ -108,7 +130,13 @@
         flex: 1;
         margin: 0 0 0 var(--space-sm);
 
-        h1,
+        .h2 {
+            font-size: var(--type-xl);
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: var(--space-xxxs);
+        }
+
         p {
             text-align: left;
             margin-top: 0;

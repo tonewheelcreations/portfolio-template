@@ -18,7 +18,7 @@ const IndexPage = () => {
             subtitle
             featuredImage {
               childImageSharp {
-              fluid(maxWidth: 800, maxHeight: 440) {
+              fluid(maxWidth: 800) {
                   ...GatsbyImageSharpFluid
                 }
               }

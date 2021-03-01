@@ -18,73 +18,40 @@
   --type-xs: calc(var(--base-size) / var(--scale-ratio));
 }
 
-@include breakpoints.breakpoint(md) {
-  h3 {
-    line-height: 1.45;
-  }
-}
-
-@include breakpoints.breakpoint(lg) {
-  h1 {
-    line-height: 1.15;
-  }
-
-  h2 {
-    line-height: 1.5;
-  }
-  h3 {
-    line-height: 1.5;
-  }
-}
-
-/* h1 */
+/*** Headings and Body ***/
 
 h1 {
   margin: 0;
   min-width: 0;
-  font-size: var(--type-xl);
+  font-size: var(--type-lg);
   font-family: var(--font-secondary);
   line-height: 1.25;
   font-weight: 800;
-  -webkit-letter-spacing: -0.015em;
-  -moz-letter-spacing: -0.015em;
-  -ms-letter-spacing: -0.015em;
-  letter-spacing: -0.015em;
   margin-top: var(--space-xxxs);
   margin-bottom: var(--space-xxxs);
 }
-
-/* h2 */
 
 h2 {
   margin: 0;
   min-width: 0;
   font-family: var(--font-secondary);
-  font-size: var(--type-lg);
+  font-size: var(--type-md);
   line-height: 1.2;
   font-weight: 400;
   margin-top: var(--space-xxxs);
   margin-bottom: var(--space-xxxs);
 }
 
-/* h3 */
-
 h3 {
   margin: 0;
   min-width: 0;
   font-family: var(--font-secondary);
-  font-size: var(--type-md);
+  font-size: var(--type-sm);
   line-height: 1.4;
   font-weight: 600;
-  -webkit-letter-spacing: -0.015em;
-  -moz-letter-spacing: -0.015em;
-  -ms-letter-spacing: -0.015em;
-  letter-spacing: -0.015em;
   margin-top: var(--space-xxxxs);
   margin-bottom: var(--space-xxxxs);
 }
-
-/* h4 */
 
 h4 {
   margin: 0;
@@ -93,15 +60,9 @@ h4 {
   font-size: var(--type-sm);
   line-height: 1.4;
   font-weight: 600;
-  -webkit-letter-spacing: -0.015em;
-  -moz-letter-spacing: -0.015em;
-  -ms-letter-spacing: -0.015em;
-  letter-spacing: -0.015em;
   margin-top: var(--space-xxxxs);
   margin-bottom: var(--space-xxxxs);
 }
-
-/* h5 */
 
 h5 {
   margin: 0;
@@ -110,15 +71,9 @@ h5 {
   font-size: var(--base-size);
   line-height: 1.4;
   font-weight: 600;
-  -webkit-letter-spacing: -0.015em;
-  -moz-letter-spacing: -0.015em;
-  -ms-letter-spacing: -0.015em;
-  letter-spacing: -0.015em;
   margin-top: var(--space-xxxxs);
   margin-bottom: var(--space-xxxxs);
 }
-
-/* h6 */
 
 h6 {
   margin: 0;
@@ -127,10 +82,6 @@ h6 {
   font-size: var(--type-sm);
   line-height: 1.4;
   font-weight: 600;
-  -webkit-letter-spacing: -0.015em;
-  -moz-letter-spacing: -0.015em;
-  -ms-letter-spacing: -0.015em;
-  letter-spacing: -0.015em;
   margin-top: var(--space-xxxxs);
   margin-bottom: var(--space-xxxxs);
 }
@@ -143,6 +94,32 @@ body {
   line-height: 1.6;
   font-weight: 400;
 }
+
+/*** Media Queries ***/
+
+@include breakpoints.breakpoint(md) {
+  h3 {
+    line-height: 1.45;
+  }
+}
+
+@include breakpoints.breakpoint(lg) {
+  h1 {
+    line-height: 1.15;
+    font-size: var(--type-xl);
+  }
+
+  h2 {
+    line-height: 1.5;
+    font-size: var(--type-lg);
+  }
+
+  h3 {
+    line-height: 1.5;
+  }
+}
+
+/*** Fonts ***/
 
 // Noto Sans JP
 
@@ -178,7 +155,7 @@ body {
   font-display: swap;
 }
 
-/* Open Sans */
+// Open Sans
 
 @font-face {
   font-family: "Open Sans";

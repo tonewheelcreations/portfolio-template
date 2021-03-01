@@ -51,6 +51,7 @@
 .projectInfo {
     h3 {
         font-weight: 600;
+        font-size: var(--type-lg);
     }
 
     p {
@@ -73,16 +74,11 @@ a {
 .article {
     grid-column: span 12;
     margin-bottom: var(--space-xxl);
-    transition: transform 0.2s;
-}
-
-.article:hover {
-    transform: scale(1.025);
 }
 
 @include breakpoints.breakpoint(lg) {
     .article {
-        grid-column: span 6;
+        grid-column: span 12;
     }
 
     .projects {
